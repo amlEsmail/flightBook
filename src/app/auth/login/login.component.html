@@ -1,0 +1,20 @@
+<div class="right">
+
+    <h3>Returning Customer</h3>
+    <p><strong>I am a returning customer</strong></p>
+    
+    <form (ngSubmit)="onLogin(loginForm)" #loginForm=ngForm>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" id="email" name="email" ngModel required #email="ngModel">
+        <!-- <span *ngIf="!email.valid && email.touched" class="err-msg"> * email is required</span>-->
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" id="password" name="password" ngModel required #pass="ngModel">
+        <!--<span *ngIf="!pass.valid && pass.touched" class="err-msg"> * password is required</span>-->
+      </div>
+      <button type="submit" class="btn btn-gray" [disabled]="!loginForm.valid" >login</button>
+    </form>
+
+</div>
